@@ -1,0 +1,345 @@
+/* === Basic reset === */
+* { margin: 0; padding: 0; outline: none; font-family:Arial,serif; font-size: 12px; font-weight: normal; font-style: normal; }
+a>img { border: none; }
+header, footer, article, section, nav, aside { display: block; }
+
+/* == General == */
+body {
+    margin-bottom:40px;
+    -webkit-background-size: 100px 100px;
+    -moz-background-size: 100px 100px;
+    background-size: 100px 100px; /* Controls the size of the stripes */
+    background-color: #0ae;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -ms-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+}
+
+/* === Coca Cola font === */
+@font-face {
+    font-family: 'LokiColaRegular';
+    src: url('lokicola-webfont.eot');
+    src: url('lokicola-webfont.eot?#iefix') format('embedded-opentype'),
+    url('lokicola-webfont.woff') format('woff'),
+    url('lokicola-webfont.ttf') format('truetype'),
+    url('lokicola-webfont.svg#LokiColaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cola-font {font-family:LokiColaRegular;}
+
+/* === Info Styles === */
+h1 {
+    width:100%;
+    margin:15px 0px;
+    color:#F2FCFF;
+    text-align:center;
+    font-size:4em;
+    text-shadow:1px 1px 1px #0095CE;
+}
+
+h1 span {
+    font-size:1.5em;
+    color:#A5161F;
+    text-shadow:#fff;
+}
+
+h2 {
+    width:100%;
+    margin:15px 0px;
+    color:#F2FCFF;
+    text-align:center;
+    font-size:2em;
+    text-shadow:1px 1px 1px #0095CE;
+}
+
+h3 {
+    width:100%;
+    margin:15px 0px;
+    color:#444;
+    text-align:center;
+    font-size:1.5em;
+    text-shadow:1px 1px 1px #0095CE;
+}
+
+h3 input {
+    padding:5px 0px;
+    text-align:center;
+    color:#F2FCFF;
+    font-size:1.2em;
+    border:1px solid rgba(255,255,255,0.1);
+    background:#33BBF1;
+    box-shadow:inset 0px 0px 5px #008EC4;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder {
+    color:#fff;
+}
+
+h3 a {
+    color:#eee;
+    text-decoration:none;
+    font-size:1em;
+}
+
+h3 a:hover {
+    text-decoration:underline;
+}
+
+h4 {
+    width:100%;
+    margin:15px 0px;
+    margin-bottom:40px;
+    color:#F2FCFF;
+    text-align:center;
+    font-size:2em;
+    text-shadow:1px 1px 1px #0095CE;
+}
+
+p {
+    display:block;
+    width:90%;
+    max-width:820px;
+    margin:20px auto;
+    font-size:1.5em;
+    line-height:1.4em;
+    color:#F2FCFF;
+    text-shadow:1px 1px 1px #0095CE;
+}
+
+.social {
+    position:fixed;
+    top:50px;
+    right:20px;
+}
+
+/* === Coca Cola Can === */
+.coca-cola {
+    position:relative;
+    width:210px;
+    height:450px;
+    padding:60px;
+    padding-bottom:20px;
+    margin: 40px auto;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.1);
+    background:#33BBF1;
+    box-shadow:inset 0px 0px 5px #008EC4;
+    z-index:1;
+}
+
+.can-shadow {
+    position:absolute;
+    bottom:-50px;
+    left:0px;
+    width:280px;
+    height:50px;
+    border-radius: 30%;
+    box-shadow: 28px -105px 30px rgba(0,0,0,0.15);
+    z-index:1;
+}
+
+.can-top {
+    position:relative;
+    width:170px;
+    height:2%;
+    margin:0 auto;
+    margin-bottom:-4px;
+    background:#aaa;
+    border-radius:35%;
+    z-index:100;
+    border:1px solid #666;
+}
+
+.can-top .shades {
+    width:100%;
+    height:100%;
+    border-radius:35%;
+    z-index:100;
+}
+
+.can-body {
+    position:relative;
+    height:380px;
+    border-radius: 2% / 50%;
+    z-index:100;
+}
+
+.can-body .cut-left {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #33BBF1;
+    border-right: 20px solid transparent;
+}
+
+.can-body .cut-right {
+    position:absolute;
+    top:0;
+    right:0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #33BBF1;
+    border-left: 20px solid transparent;
+}
+
+.can-body .top-shade {
+    position:absolute;
+    top:0px;
+    left:5px;
+    width:90%;
+    height:1px;
+    box-shadow:0px 25px 10px #58080A;
+}
+
+.can-body .middle-shade {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:80%;
+    box-shadow:100px 30px 70px #58080A;
+}
+
+.can-body .bottom {
+    position:absolute;
+    left:5px;
+    bottom:-4%;
+    width:96%;
+    height:10%;
+    border-radius: 90% / 80%;
+}
+
+.can-body .bottom .shades {
+    position:absolute;
+    top:0px;
+    width:80%;
+    height:10%;
+    background:transparent;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    /*background:black;*/
+    box-shadow:0px 32px 20px rgba(0,0,0,0.3);
+}
+
+.can-body h5 {
+    position:absolute;
+    top:20%;
+    left:40px;
+    height:65%;
+    width:300px;
+    line-height:50px;
+    color:#fff;
+    font-size:8em;
+    z-index:100;
+}
+
+.can-body h5 small{
+    display:block;
+    padding-right:130px;
+    padding-top:0px;
+    font-family: Arial;
+    font-size:0.15em;
+    font-weight:lighter;
+    color:#fff;
+    text-align:center;
+}
+
+.can-body .line {
+    position:absolute;
+    top:58%;
+    left:5px;
+    display:block;
+    width:300px;
+    color:#fff;
+    font-size:18em;
+    z-index:10;
+    line-height:0;
+}
+
+.can-bottom {
+    position:relative;
+    width:205px;
+    height:5%;
+    margin: 0 auto;
+    margin-top:-1px;
+    border-bottom:2px solid rgba(100,100,100,0.8);
+    background:#aaa;
+    /*border-radius:35%;*/
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 150%;
+    z-index:40;
+}
+
+.can-bottom .shades {
+    width:100%;
+    height:100%;
+    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 150%;
+    z-index:30;
+}
+
+.bubble {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:10px;
+    height:10px;
+    background:transparent;
+    border-radius:10px;
+    box-shadow:inset 1px 1px 5px rgba(0,0,0,0.5);
+    z-index:1000;
+}
+
+.rotate {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* === Gradients === */
+.main-full {
+    background: #7c1317; /* Old browsers */
+    background: -moz-linear-gradient(left,  #7c1317 0%, #eb1c2c 20%, #eb1c2c 80%, #7c1317 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#7c1317), color-stop(20%,#eb1c2c), color-stop(80%,#eb1c2c), color-stop(100%,#7c1317)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #7c1317 0%,#eb1c2c 20%,#eb1c2c 80%,#7c1317 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #7c1317 0%,#eb1c2c 20%,#eb1c2c 80%,#7c1317 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #7c1317 0%,#eb1c2c 20%,#eb1c2c 80%,#7c1317 100%); /* IE10+ */
+    background: linear-gradient(to right,  #7c1317 0%,#eb1c2c 20%,#eb1c2c 80%,#7c1317 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c1317', endColorstr='#7c1317',GradientType=1 ); /* IE6-9 */
+
+}
+
+.dark-bottom {
+    background: #efefef; /* Old browsers */
+    background: -moz-linear-gradient(top,  #efefef 0%, #686868 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#686868)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #efefef 0%,#686868 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #efefef 0%,#686868 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #efefef 0%,#686868 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #efefef 0%,#686868 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#686868',GradientType=0 ); /* IE6-9 */
+}
+
+.metal-light {
+    background: #aaa;
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 17%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 66%, rgba(0,0,0,0) 83%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(17%,rgba(0,0,0,0)), color-stop(37%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.5)), color-stop(66%,rgba(0,0,0,0)), color-stop(83%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 17%,rgba(0,0,0,0) 37%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 66%,rgba(0,0,0,0) 83%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 17%,rgba(0,0,0,0) 37%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 66%,rgba(0,0,0,0) 83%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 17%,rgba(0,0,0,0) 37%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 66%,rgba(0,0,0,0) 83%,rgba(0,0,0,0.7) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 17%,rgba(0,0,0,0) 37%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 66%,rgba(0,0,0,0) 83%,rgba(0,0,0,0.7) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#b3000000',GradientType=1 ); /* IE6-9 */
+}
